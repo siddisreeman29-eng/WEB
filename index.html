@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>gh0st – Websites for ₹500</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0D1117;--panel:#161B22;--line:#30363D;--text:#E6EDF3;--muted:#8B949E;--key:#79C0FF;--str:#7EE787;--pur:#D2A8FF;--org:#FFA657;--btn:#7EE787;--btn-ink:#0D1117;color-scheme:dark;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#FFFFFF;--panel:#F6F8FA;--line:#D0D7DE;--text:#1F2328;--muted:#57606A;--key:#0550AE;--str:#116329;--pur:#8250DF;--org:#953800;--btn:#1A7F37;--btn-ink:#FFFFFF;color-scheme:light}}
+:root[data-theme="light"]{--bg:#FFFFFF;--panel:#F6F8FA;--line:#D0D7DE;--text:#1F2328;--muted:#57606A;--key:#0550AE;--str:#116329;--pur:#8250DF;--org:#953800;--btn:#1A7F37;--btn-ink:#FFFFFF;color-scheme:light}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:400 16px/1.7 "JetBrains Mono",ui-monospace,Menlo,Consolas,monospace}
+.wrap{max-width:900px;margin:0 auto;padding:0 20px}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--key);outline-offset:3px}
+.k{color:var(--key)}.s{color:var(--str)}.p{color:var(--pur)}.o{color:var(--org)}.m{color:var(--muted)}
+header{display:flex;justify-content:space-between;align-items:center;padding:18px 0;border-bottom:1px solid var(--line)}
+.logo{font-weight:800;font-size:20px;text-decoration:none}
+.btn{display:inline-block;background:var(--btn);color:var(--btn-ink);font-weight:700;padding:13px 24px;border-radius:8px;text-decoration:none;font-size:16px}
+.btn:hover{filter:brightness(1.1)}
+.btn.sm{padding:8px 16px;font-size:14px}
+.hero{padding:56px 0 40px}
+h1{font-size:clamp(34px,7vw,64px);line-height:1.08;font-weight:800;margin:0 0 18px;letter-spacing:-.03em}
+.lead{max-width:36em;color:var(--muted);font-size:17px;margin:0 0 26px}
+.cursor{display:inline-block;width:.5em;height:1em;background:var(--str);vertical-align:-.12em;animation:blink 1.1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.cursor{animation:none}}
+.code{background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:34px 0 0}
+.bar{display:flex;gap:7px;align-items:center;padding:10px 14px;border-bottom:1px solid var(--line);font-size:13px;color:var(--muted)}
+.bar i{width:11px;height:11px;border-radius:50%;background:var(--line)}
+.bar span{margin-left:8px}
+pre{margin:0;padding:18px 20px;overflow-x:auto;font:inherit;font-size:15px;line-height:1.8}
+section{padding:44px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(24px,4vw,34px);margin:0 0 22px;font-weight:800;letter-spacing:-.02em}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:20px}
+.card h3{margin:0 0 6px;font-size:16px;color:var(--key)}
+.card p{margin:0;color:var(--muted);font-size:15px}
+.tags{display:flex;flex-wrap:wrap;gap:10px;padding:0;margin:0;list-style:none}
+.tags li{border:1px solid var(--line);background:var(--panel);padding:6px 14px;border-radius:6px;font-size:15px;color:var(--str)}
+.steps{counter-reset:s;list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.steps li{counter-increment:s;display:flex;gap:16px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:18px 20px}
+.steps li::before{content:counter(s);color:var(--org);font-weight:800;font-size:20px}
+.steps b{display:block;color:var(--text)}
+.steps span{color:var(--muted);font-size:15px}
+.price{display:grid;gap:26px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:30px}
+.big{font-size:clamp(54px,12vw,92px);font-weight:800;line-height:1;color:var(--str);letter-spacing:-.04em}
+.price ul{margin:0 0 22px;padding:0;list-style:none}
+.price li::before{content:"✓ ";color:var(--str)}
+footer{border-top:1px solid var(--line);padding:26px 0 36px;color:var(--muted);font-size:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header><a class="logo" href="#top"><span class="s">&gt;</span> gh0st</a><a class="btn sm" href="#contact">Get yours</a></header>
+
+<main id="top">
+<div class="hero">
+<h1>Your business, online.<span class="cursor" aria-hidden="true"></span></h1>
+<p class="lead">I design clean, fast websites for shops, classes and local services. One flat price. No monthly fees from me.</p>
+<a class="btn" href="https://wa.me/918897789264?text=Hi%20gh0st%2C%20I%20want%20a%20website%20for%20my%20business" target="_blank" rel="noopener">Chat on WhatsApp</a>
+
+<div class="code">
+<div class="bar"><i></i><i></i><i></i><span>offer.js</span></div>
+<pre><span class="k">const</span> <span class="p">offer</span> = {
+  <span class="key k">price</span>:    <span class="s">"₹500"</span>,
+  <span class="key k">delivery</span>: <span class="s">"3 days"</span>,
+  <span class="key k">files</span>:    <span class="s">"HTML, yours forever"</span>,
+  <span class="key k">monthly</span>:  <span class="o">0</span>,
+  <span class="key k">payAfterApproval</span>: <span class="o">true</span>
+};</pre>
+</div>
+</div>
+</main>
+
+<section>
+<h2>What you get</h2>
+<div class="grid">
+<div class="card"><h3>Mobile first</h3><p>Most customers open it on a phone, so I build for that first.</p></div>
+<div class="card"><h3>Your details up front</h3><p>Name, photos, services, prices, timings and map location in one place.</p></div>
+<div class="card"><h3>WhatsApp and call buttons</h3><p>Customers tap once to message or call you.</p></div>
+<div class="card"><h3>Findable on Google</h3><p>Basic search setup so people can find you by business name.</p></div>
+</div>
+</section>
+
+<section>
+<h2>Made for small businesses</h2>
+<ul class="tags">
+<li>Shops</li><li>Tuition teachers</li><li>Salons</li><li>Home bakers</li><li>Tailors</li><li>Photographers</li><li>Clinics</li><li>Freelancers</li><li>Restaurants</li>
+</ul>
+</section>
+
+<section>
+<h2>How it works</h2>
+<ol class="steps">
+<li><div><b>Message me your details</b><span>Business name, what you offer, a few photos and your phone number.</span></div></li>
+<li><div><b>I build it in 3 days</b><span>You see a preview and can ask for changes.</span></div></li>
+<li><div><b>Pay ₹500 and go live</b><span>Pay only after you’re happy. You get the files and I help you upload them to your host.</span></div></li>
+</ol>
+</section>
+
+<section id="contact">
+<div class="price">
+<div>
+<div class="big">₹500</div>
+<div class="m">one time, per website</div>
+</div>
+<div>
+<ul>
+<li>One-page website</li>
+<li>1 round of changes</li>
+<li>Yours to host on GoDaddy or any provider</li>
+<li>WhatsApp and call buttons</li>
+</ul>
+<a class="btn" href="https://wa.me/918897789264?text=Hi%20gh0st%2C%20I%20want%20a%20website%20for%20my%20business" target="_blank" rel="noopener">Chat on WhatsApp</a>
+<p class="m" style="font-size:13px;margin:14px 0 0">+91 88977 89264. Hosting and domain are bought by you from GoDaddy or any provider. I’ll help you upload it.</p>
+</div>
+</div>
+</section>
+</div>
+<footer><div class="wrap">gh0st · Websites for local businesses · Telangana, India</div></footer>
+</body>
+</html>
